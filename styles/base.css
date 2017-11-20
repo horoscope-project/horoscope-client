@@ -2,14 +2,16 @@ body {
   font-family: 'Amatic SC', cursive;
   background-color: lightPink;
   text-align: center;
+  max-width: 100%;
 }
 
 header {
-  margin: 10px auto;
+  margin: 0 auto;
   width: 60%;
 }
 
 h1 {
+  font-size: 50px;
   display: inline-block;
   padding: 20px 20px;
   padding-right: 1em;
@@ -36,7 +38,7 @@ img {
 }
 
 #catherine-horoscope, #sarah-horoscope, #olivia-horoscope, #jamie-horoscope {
-  margin-left: 20px;
+  /*margin-left: 20px;*/
 }
 
 #sarah {
