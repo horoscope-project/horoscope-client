@@ -13,24 +13,32 @@ var app = app || {};
   }
 
   $('#catherine').on('click', () => {
-    $( '#catherine-horoscope' ).toggle( 'slow', () => {
+    $( '#catherine-horoscope' ).toggle('slow', () => {
     });
   });
 
   $('#sarah').on('click',() => {
-    $( '#sarah-horoscope' ).toggle( 'slow', () => {
+    $( '#sarah-horoscope' ).toggle('slow', () => {
     });
   });
 
   $('#olivia').on('click', () => {
-    $( '#olivia-horoscope' ).toggle( 'slow', () => {
+    $( '#olivia-horoscope' ).toggle('slow', () => {
     });
   });
 
   $('#jamie').on('click', () => {
-    $( '#jamie-horoscope' ).toggle( 'slow', () => {
+    $( '#jamie-horoscope' ).toggle('slow', () => {
     });
   });
+
+  horoscopeView.addNewFriend = () => {
+    $('#friend').toggle();
+  }
+
+  $('#addNewFriend').on('click', () => {
+    horoscopeView.addNewFriend();
+  })
 
   module.horoscopeView = horoscopeView;
 })(app);
