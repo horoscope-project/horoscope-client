@@ -46,7 +46,14 @@ input {
   border-radius: none;
 }
 
-input[name="firstname"] {
-  color: black;
-  font-size: 20px;
+#login {
+  background-color: black;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+#loginbutton {
+  font-size: 25px;
+  padding: 5px 10px;
+  float: right;
 }

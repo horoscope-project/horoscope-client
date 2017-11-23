@@ -56,7 +56,14 @@ $('#submitnewfriend').on('click', (event) => {
     .then(data => {
       data = JSON.parse(data);
       console.log('newfriend', data);
-      $(`#${firstname}`).append(`<h2 id="${firstname}-horoscope">${astrologicalsign}: ${data.horoscope}</h2`);
+      $(`#${firstname}`).append(`<h2 id="${firstname}-horoscope">${astrologicalsign}: ${data.horoscope}, ${data.date}</h2`);
+      // $(`#${firstname}-horoscope`).append(`<button id="delete" type="button" name="button">Delete</button>`);
+      // $('#delete').on('click', () => {
+      //   $(`#${firstname}`).remove();
+      // })
+      var fontColor = ['black','darkSlateGray','darkMagenta', 'goldenrod', 'lightBlue', 'lightseagreen', 'olive', 'orangered', 'orange', 'rosybrown'];
+      var randomColor = fontColor[Math.floor(Math.random() * fontColor.length)];
+      $(`#${firstname}`).css('color',randomColor);
       $(`#${firstname}-horoscope`).hide();
       $(`#${firstname}`).on('click', () => {
         $(`#${firstname}-horoscope`).toggle('slow'), () => {}
