@@ -10,6 +10,7 @@ var app = app || {};
     $('#sarah-horoscope').hide();
     $('#olivia-horoscope').hide();
     $('#jamie-horoscope').hide();
+    $('#friend').hide();
   }
 
   $('#catherine').on('click', () => {
@@ -43,8 +44,15 @@ var app = app || {};
   module.horoscopeView = horoscopeView;
 })(app);
 
-var astrologicalsign;
+$('#loginbutton').on('click', (event) => {
+  event.preventDefault();
+  var username = $('input[name="username"]').val();
+  var password = $('input[name="password"]').val();
+  console.log(username);
+  console.log(password);
+})
 
+var astrologicalsign;
 $('#submitnewfriend').on('click', (event) => {
   event.preventDefault();
   var firstname = $('input[name="firstname"]').val();
