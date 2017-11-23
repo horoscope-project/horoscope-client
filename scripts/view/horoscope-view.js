@@ -43,6 +43,27 @@ var app = app || {};
   module.horoscopeView = horoscopeView;
 })(app);
 
+var astrologicalsign;
+
+$('#submitnewfriend').on('click', (event) => {
+  event.preventDefault();
+  var firstname = $('input[name="firstname"]').val();
+  astrologicalsign = $('input[name="astrologicalsign"]').val();
+  console.log(astrologicalsign);
+  $('#myfriends').append(`<h1 id="${firstname}">${firstname}</h1>`);
+
+  $.get(`${__API_URL__}/api/v1/horoscope/${astrologicalsign}`)
+    .then(data => {
+      data = JSON.parse(data);
+      console.log('newfriend', data);
+      $(`#${firstname}`).append(`<h2 id="${firstname}-horoscope">${astrologicalsign}: ${data.horoscope}</h2`);
+      $(`#${firstname}-horoscope`).hide();
+      $(`#${firstname}`).on('click', () => {
+        $(`#${firstname}-horoscope`).toggle('slow'), () => {}
+      })
+    })
+})
+
 $(document).ready(function() {
   app.horoscopeView.initIndexPage();
 })
