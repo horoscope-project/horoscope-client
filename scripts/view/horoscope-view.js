@@ -56,7 +56,7 @@ var astrologicalsign;
 $('#submitnewfriend').on('click', (event) => {
   event.preventDefault();
   var firstname = $('input[name="firstname"]').val();
-  astrologicalsign = $('input[name="astrologicalsign"]').val();
+  astrologicalsign = $('input[name="astrologicalsign"]').val().toLowerCase();
   console.log(astrologicalsign);
   $('#myfriends').append(`<h1 id="${firstname}">${firstname}</h1>`);
 
