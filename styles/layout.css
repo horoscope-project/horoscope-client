@@ -1,0 +1,59 @@
+button {
+  background-color: salmon;
+  border: none;
+  border-radius: 10px;
+  color: lightPink;
+  padding: 20px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-family:'Amatic SC', cursive;
+  float: left;
+  margin: 20px 0;
+  cursor: pointer;
+  font-size: 50px;
+}
+
+button:hover {
+  background-color: cornsilk;
+  color: salmon;
+}
+
+#friend {
+  border: 2px solid black;
+  text-align: left;
+  float: left;
+  background-color: black;
+}
+
+input {
+  background-color: cornsilk;
+  font-size: 16px;
+  font-family:'Amatic SC', cursive;
+  border: 2px solid salmon;
+  width: 95%;
+  margin: 5px 1px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+#submitnewfriend {
+  font-size: 20px;
+  padding: 10px 20px;
+  text-align: center;
+  margin: 10px 20px;
+  border-radius: none;
+}
+
+#login {
+  background-color: black;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+#loginbutton {
+  font-size: 25px;
+  padding: 5px 10px;
+  float: right;
+}
